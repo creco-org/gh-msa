@@ -6,9 +6,10 @@ commitId=$(git rev-parse HEAD)
 serviceList=("creco.me/react" "divops.world/main")
 
 for i in ${!serviceList[@]}; do
-  domain=$(cut -d'/' -f1 <<<"$serviceList[$i]")
+  service=${serviceList[$i]}
+  domain=$(cut -d'/' -f1 <<<"$service")
   echo "domain: $domain"
-  servicePath=${serviceList[$i]//$domain\//}
+  servicePath=${service//$domain\//}
   echo "servicePath: $servicePath"
 
   sourceRoot=$workspace/$domain
@@ -64,7 +65,7 @@ for i in ${!serviceList[@]}; do
   cd $targetRoot
   deployDate=$(date -R)
   git add -A
-  git commit -m "deploy: $serviceList[$i] $deployDate"
+  git commit -m "deploy: $service $deployDate"
   git push origin main
   echo 11
 
