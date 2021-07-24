@@ -3,7 +3,7 @@
 workspace=$(pwd)
 commitId=$(git rev-parse HEAD)
 
-serviceList=("creco.me/react" "divops.world/main")
+serviceList=("creco.me/react" "divops.world/main" "blog.creco.me/main")
 
 for i in ${!serviceList[@]}; do
   service=${serviceList[$i]}
