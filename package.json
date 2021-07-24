@@ -1,0 +1,16 @@
+{
+  "name": "gh-msa",
+  "version": "1.0.0",
+  "author": "CreatiCoding",
+  "description": "MSA for github pages",
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": [ "MSA", "Github Page" ],
+  "bugs": {
+    "url": "https://github.com/creco-org/gh-msa/issues"
+  },
+  "homepage": "https://github.com/creco-org/gh-msa#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
