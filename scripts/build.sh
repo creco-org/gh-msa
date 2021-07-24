@@ -59,7 +59,7 @@ for i in ${!serviceList[@]}; do
   cp $sourceRoot/CNAME $targetRoot/CNAME
   cp $sourceRoot/index.html $targetRoot/index.html
 
-  echo "{\"version\":\"$commitId\"}" >$targetRoot/$servicePath/deployment.json
+  echo "{\"version\":\"$commitId\", \"date\": \"$(date -R)\"}" >$targetRoot/$servicePath/version.json
   echo 10
 
   cd $targetRoot
